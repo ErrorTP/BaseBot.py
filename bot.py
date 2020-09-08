@@ -21,7 +21,7 @@ async def say(msg,*,message):
 
 @bot.command()
 async def greet(msg):
-    #Greets the user with random begining everytime
+    #Greets the user
     greetings=['Hello there','Hi there','Hiya','Hello','Hi']
     return await msg.send(f"{random.choice(greetings)} {msg.author.name}")
 
