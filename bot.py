@@ -1,7 +1,7 @@
 import discord
 import asyncio
 
-client = discord.Client()
+client = discord.Client('NzQxODgyNDYwODQ0ODUxMjUx.Xy-B4g.QgBS5Yi_DVv1J6OhymXs529PetM')
 
 @client.event
 async def on_ready():
