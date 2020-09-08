@@ -1,18 +1,30 @@
+
+
+import os
 import discord
-import asyncio
+import random
+from discord.ext import commands
 
-client = discord.Client('NzQxODgyNDYwODQ0ODUxMjUx.Xy-B4g.QgBS5Yi_DVv1J6OhymXs529PetM')
+bot=commands.Bot(command_prefix='.')
 
-@client.event
+@bot.event
 async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
+    print(bot.user.name, "is ready!")
 
-@client.event
-async def on_message(message):
-    if message.content.startswith('!ping'):
-       await client.send_message(message.channel, 'Pong!')
 
-client.run('NzQxODgyNDYwODQ0ODUxMjUx.Xy-B4g.QgBS5Yi_DVv1J6OhymXs529PetM')
+@bot.command()
+async def say(msg,*,message):
+    #Repeats whatever user types after the .say
+    return await msg.send(message)
+
+
+
+@bot.command()
+async def greet(msg):
+    #Greets the user with random begining everytime
+    greetings=['Hello there','Hi there','Hiya','Hello','Hi']
+    return await msg.send(f"{random.choice(greetings)} {msg.author.name}")
+
+
+
+bot.run(os.getenv('BOT_TOKEN')) #NOTE: Replace the word BOT_TOKEN with the name of your Config Var name representing your bot token
