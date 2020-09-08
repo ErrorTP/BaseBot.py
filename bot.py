@@ -1,7 +1,7 @@
 import discord
 import asyncio
 
-client = discord.Client('NzUyNzM4MDA2ODI1MzA0MTE2.X1b_5g.p-kWeZ5QAQgKAgYXHZ7XnF9om4M')
+client = discord.Client()
 
 @client.event
 async def on_ready():
@@ -15,4 +15,4 @@ async def on_message(message):
     if message.content.startswith('!ping'):
        await client.send_message(message.channel, 'Pong!')
 
-client.run('NzUyNzM4MDA2ODI1MzA0MTE2.X1b_5g.p-kWeZ5QAQgKAgYXHZ7XnF9om4M')
+client.run('NzQxODgyNDYwODQ0ODUxMjUx.Xy-B4g.QgBS5Yi_DVv1J6OhymXs529PetM')
