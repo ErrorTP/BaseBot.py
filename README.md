@@ -1,2 +1,2 @@
 # BaseBot.py
-a template for discord.js bots hosted on herkou 
+a template for discord.py bots hosted on herkou 
